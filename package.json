@@ -1,0 +1,8 @@
+{
+  "name": "cheese-challenge",
+  "version": "0.1.0",
+  "description": "CHEESE CHALLENGE: brutally hard pixel-art platformer starring Cheese Rat",
+  "private": true,
+  "scripts": { "start": "node server.js", "test": "node tests/smoke.js" },
+  "license": "UNLICENSED"
+}

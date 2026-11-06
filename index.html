@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
+<title>CHEESE CHALLENGE</title>
+<link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+<div id="wrap">
+  <div id="hud">
+    <span>LV <b id="h-lv">1</b></span><span>TIME <b id="h-time">0:00.00</b></span>
+    <span>SCORE <b id="h-score">0</b></span><span>DEATHS <b id="h-deaths">0</b></span>
+    <button id="b-restart" title="R">RESTART</button><button id="b-finish" title="Q">END RUN</button>
+  </div>
+  <canvas id="game" width="320" height="192"></canvas>
+</div>
+
+<div id="touch">
+  <div><button data-k="l">&#9664;</button><button data-k="r">&#9654;</button></div>
+  <button data-k="j" class="jump">JUMP</button>
+</div>
+
+<section id="menu" class="ov on">
+  <canvas id="logo" width="12" height="9"></canvas>
+  <h1>CHEESE<br>CHALLENGE</h1>
+  <p class="tag">THE HARDEST RAT GAME EVER</p>
+  <button id="b-play">PLAY</button>
+  <button id="b-lb">LEADERBOARD</button>
+  <button id="b-how">HOW TO PLAY</button>
+  <p class="small">v0.1 &bull; local build &bull; no wallets, no payouts</p>
+</section>
+
+<section id="lb" class="ov">
+  <h2>LEADERBOARD</h2>
+  <p id="lbnote" class="small"></p>
+  <div id="lbbody" class="tbl"></div>
+  <button id="b-lb-back">BACK</button>
+</section>
+
+<section id="how" class="ov">
+  <h2>HOW TO PLAY</h2>
+  <ul>
+    <li><b>MOVE</b> &larr; &rarr; or A / D</li>
+    <li><b>JUMP</b> Space / &uarr; / W (hold = higher)</li>
+    <li><b>R</b> restart run &nbsp; <b>Q</b> end run, then submit your score</li>
+    <li>Touch screens: on-screen buttons</li>
+    <li>Grab cheese (+100). Spikes, lava and saws kill you.</li>
+    <li>Green flags are checkpoints. Green blocks vanish!</li>
+    <li>Clear a level: +1000 and a speed bonus.</li>
+    <li>Each death costs 25 points. Good luck.</li>
+  </ul>
+  <button id="b-how-back">BACK</button>
+</section>
+
+<section id="end" class="ov">
+  <h2 id="endtitle">RUN OVER</h2>
+  <div class="stats">
+    <span>SCORE <b id="s-score">0</b></span><span>LEVEL <b id="s-level">1</b></span>
+    <span>TIME <b id="s-time">0:00</b></span><span>BEST <b id="s-best">-</b></span>
+  </div>
+  <input id="name" maxlength="12" placeholder="YOUR NAME" autocomplete="off">
+  <button id="submit">SUBMIT SCORE</button>
+  <p id="endmsg" class="small"></p>
+  <div id="endlb" class="tbl"></div>
+  <div><button id="b-again">PLAY AGAIN</button><button id="b-menu">MENU</button></div>
+</section>
+
+<script src="src/config.js"></script>
+<script src="src/sprites.js"></script>
+<script src="src/leaderboard.js"></script>
+<script src="src/rewards.js"></script>
+<script src="src/game.js"></script>
+<script src="src/ui.js"></script>
+</body>
+</html>
